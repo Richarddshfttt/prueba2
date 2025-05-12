@@ -1,0 +1,144 @@
+body {
+    font-family: 'Garamond', serif;
+
+    background-color: #321a08;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    font-style: italic;
+    background-color: hwb(30 21% 54%);
+   padding: 10px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+
+}
+
+main {
+    display: flex;
+    margin: 20px;
+}
+
+.content {
+    width: 69%;
+    min-height: 500px;
+    margin: 0px auto;
+    border: 1px solid #8b5a2b;
+    background-color: #d7c1a0;
+}
+
+.sidebar {
+    float: right;
+    width: 31%;
+    min-height: 500px;
+    margin: 0px auto;
+    border: 1px solid #8b5a2b;
+    background-color: #e2dfda;
+}
+
+
+#encabezado .menu{
+    
+    width: 450px;
+    float: right;
+    margin-top: 10px;
+    text-align: center;
+    border: 0px solid;
+    font-size: 10px;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+
+nav li{
+    line-height: 2.5rem;
+    position: relative;
+}
+
+.menu ul{
+    position: absolute;
+}
+
+nav a{
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    transition: .4s;
+    padding: 10px 20px;
+}
+
+nav a:hover{
+    background: rgba(0,0,0,.5);
+}
+
+nav li ul{
+    float: right;
+    font-size: 17px;
+}
+
+
+/*menu parte primer nivel*/
+.menu{
+    background: hsl(41, 58%, 69%);
+    color: #000;
+    display: table;
+    height: auto;
+}
+
+.menu >li{
+    float: left;
+}
+
+/*menu parte segundo nivel*/
+nav li li{
+    background: hsl(32, 54%, 27%);
+    
+    max-height: 0;
+    overflow: hidden;
+    transition: all .1s;
+    width: 100px;
+}
+
+nav li:hover > ul > li{
+   max-height: 500px;
+   overflow: visible; 
+}
+
+.menu > li > ul{
+top:100%;
+}
+
+/*menu parte tercer nivel*/
+.menu ul ul{
+left:100%; 
+top: 0;
+}
+
+.clearfix{
+    clear:both;
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #855b39;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .footer {
+        position: relative;
+    }
+}
